@@ -85,8 +85,8 @@ public static class StudentLogic
 * 输出结果
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/297115/1553998004321-0116c3dc-6980-4ef9-87b0-fd625c0e6602.png#align=left&display=inline&height=330&name=image.png&originHeight=412&originWidth=1025&size=24277&status=done&width=820)
 
-
-
+###Fork说明
+做了一些个性化定制，如全量数据源匹配部分模板数据源等
 
 ### 更多文章
 [ExcelReport文档](https://www.yuque.com/motse/excelreport)
