@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Description>使用NPOI实现的ExcelReport驱动包</Description>
     <Copyright>Copyright 2019</Copyright>
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
@@ -22,9 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExcelReport.Driver" Version="2.0.0" />
     <PackageReference Include="NPOI" Version="2.4.1" />
     <PackageReference Include="NPOI.Extend" Version="1.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelReport.Driver\ExcelReport.Driver.csproj" />
   </ItemGroup>
 
 </Project>

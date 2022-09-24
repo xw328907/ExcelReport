@@ -1,4 +1,4 @@
-﻿using ExcelReport.Contexts;
+using ExcelReport.Contexts;
 using ExcelReport.Exceptions;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
@@ -40,7 +40,8 @@ namespace ExcelReport.Renderers
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
             {
-                throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
+                return;
+                //throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
             }
 
             if (!DataSource.IsNull())
@@ -98,7 +99,8 @@ namespace ExcelReport.Renderers
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
             {
-                throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
+                return;
+                //throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
             }
 
             var items = DgSetDataSource(dataSource);

@@ -1,4 +1,4 @@
-﻿using ExcelReport.Driver.NPOI.Extends;
+using ExcelReport.Driver.NPOI.Extends;
 using NPOI.Extend;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,9 +20,9 @@ namespace ExcelReport.Driver.NPOI
 
         public string SheetName => NpoiSheet.SheetName;
 
-        public int CopyRows(int start, int end)
+        public int CopyRows(int startRowIndex, int endRowIndex)
         {
-            return NpoiSheet.CopyRows(start, end);
+            return NpoiSheet.CopyRows(startRowIndex, endRowIndex);
         }
 
         public int RemoveRows(int start, int end)

@@ -1,4 +1,4 @@
-﻿using ExcelReport.Accumulations;
+using ExcelReport.Accumulations;
 using ExcelReport.Driver;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
@@ -40,13 +40,14 @@ namespace ExcelReport.Contexts
         {
             var startRowIndex = _rowIndexAccumulation.GetCurrentRowIndex(repeater.Start.RowIndex);
             var endRowIndex = _rowIndexAccumulation.GetCurrentRowIndex(repeater.End.RowIndex);
-
             int span = _sheet.CopyRows(startRowIndex, endRowIndex);
             ICell startCell = GetCell(repeater.Start);
-            startCell.Value = startCell.GetStringValue().CutEndOf($"<[{repeater.Name}]");
+            if (startCell != null)
+                startCell.Value = startCell.GetStringValue().CutEndOf($"<[{repeater.Name}]");
             processTemplate();
             ICell endCell = GetCell(repeater.End);
-            endCell.Value = endCell.GetStringValue().CutStartOf($">[{repeater.Name}]");
+            if (endCell != null)
+                endCell.Value = endCell.GetStringValue().CutStartOf($">[{repeater.Name}]");
             _rowIndexAccumulation.Add(span);
         }
 
